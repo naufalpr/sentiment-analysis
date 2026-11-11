@@ -81,6 +81,10 @@ KAMUS_SLANG = {
 stemmer = StemmerFactory().create_stemmer()
 stopword_remover = StopWordRemoverFactory().create_stop_word_remover()
 
+stemmer.delegatedStemmer.dictionary.words = set(
+    stemmer.delegatedStemmer.dictionary.words
+)
+
 # Tambahan stopword khusus domain (kata umum yang tidak membawa sentimen)
 STOPWORD_TAMBAHAN = {
     "nya", "yg", "sih", "deh", "dong", "kok", "loh", "lho", "ya", "yaa",
